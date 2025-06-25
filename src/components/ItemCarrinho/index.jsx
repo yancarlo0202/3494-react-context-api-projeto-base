@@ -1,15 +1,15 @@
-import React from "react";
+import React, { useContext } from "react";
 import Botao from "@/components/Botao";
 import Quantidade from "@/components/Quantidade";
 import ValorFormatado from "@/components/ValorFormatado";
 import InfoItemCarrinho from "./InfoItemCarrinho";
+import { useCarrinho } from "@/hooks/useCarrinhoContext";
 
 const ItemCarrinho = ({
   itemCarrinho,
   removerProdutoCarrinho,
-  adicionarProduto,
-  removerProduto,
 }) => {
+  const { adicionarProduto, removerProduto } = useCarrinho()
   return (
     <li key={itemCarrinho.id}>
       <>

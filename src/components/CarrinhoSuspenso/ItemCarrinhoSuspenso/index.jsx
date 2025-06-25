@@ -5,7 +5,6 @@ import ValorFormatado from "@/components/ValorFormatado";
 
 const ItemCarrinhoSuspenso = ({
   itemCarrinho,
-  removerProdutoCarrinho,
   adicionarProduto,
   removerProduto,
 }) => {
@@ -30,7 +29,7 @@ const ItemCarrinhoSuspenso = ({
           <Botao
             variant="deleteItem"
             aria-label="Excluir"
-            onClick={() => removerProdutoCarrinho(itemCarrinho.id)}
+            onClick={() => removerProduto(itemCarrinho.id)}
           >
             delete_forever
           </Botao>
